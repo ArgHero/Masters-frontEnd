@@ -28,6 +28,7 @@ let booleano = true;
 let cero = 0;
 let cadenaVacia = '';
 //let errorBool = FALSE; //Es un error dado que se escribe estrictamente en minusculas 
+
 console.log("La variable 'numeroRandom' contiene: "+numeroRandom+" y es de tipo: " +typeof numeroRandom);
 console.log("La variable 'txtNumero' contiene: "+txtNumero+" y es de tipo: " +typeof txtNumero);
 console.log("La variable 'numNegativo' contiene: "+numNegativo+" y es de tipo: " +typeof numNegativo);
