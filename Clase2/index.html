@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2</title>
+</head>
+<body>
+    <h1> Comparaciones y desiciones en JavaScript </h1>
+    <span class="resumen">
+        Una variable es un espacio de la memoria que permite guardar cualquier valor que necesitemos.
+        Los métodos son acciones que puede realizar el objeto.
+    </span>
+    <p> 
+        Pasa de ser mocka a liveScript y al final aprovechando el renombre de Java, cambió su nombre a JavaScript
+        Se va a ver React pero no hay problema si se aprenden otros datos
+        Brendan Ache: Ingeniero en Scape no se qué.
+    </p>
+    <ul>
+        <li><strong>String:</strong> Cadenas de caracteres</li>
+        <li><strong>Boolean:</strong> Variables logicas para tomar decisiones y sobre las cuales se pueden hacer operaciones</li>
+        <li><strong>Arrays:</strong> Estructuras que contiene diferentes tipos de datos</li>
+    </ul>
+    <h2>Problema</h2>
+    <p>Crea un programa en JavaScript que evalúe la nota de un estudiante y 
+        genere un mensaje personalizado basado en la nota. Las notas se asignan 
+        de la siguiente manera:</p>
+    <ul>
+        <li>Si la nota es 90 o más, el estudiante aprueba con "Excelente".</li>
+        <li>Si la nota está entre 75 y 89, el estudiante aprueba con "Bien".</li>
+        <li>Si la nota está entre 60 y 74, el estudiante aprueba con "Suficiente".</li>
+        <li>Si la nota es menor de 60, el estudiante no aprueba</li>
+    </ul>
+    <p>El problema se resolvió empleando un una serie de IF ternarios 
+        anidados dentro de una función que imprime la evaluación de acuerdo 
+        con el valor ingresado. Los valores de prueba son ingresados  mediante
+        un array que es explorado por su método "foreach" y mediante la funcion antes
+        descrita es llamada mediante una referencia al método.
+    </p>
+    <span style="background-color: aquamarine;">
+        <code>
+            let pruebas = [60,75,0,null,undefined,1/0,1000,74,89,59,32,53,"verde",21,67,45,97,100];<br>
+            pruebas.forEach(notaObtenida);<br>
+            function notaObtenida(calificacion){<br>
+            <blockquote>
+                console.log(`Con ${calificacion} el estudiante `.concat(<br>
+                <blockquote>
+                (calificacion>=90)?'aprueba con "Excelente"':<br>
+                (calificacion>=75)?'aprueba con "Bien"':<br>
+                (calificacion>=60)?'aprueba con "Suficiente"':<br>
+                "no aprueba"<br>
+            
+                </blockquote>
+                ));
+            </blockquote>
+            }
+            </code>
+    </span>
+    
+
+    
+</body>
+<script src="main.js"></script>
+</html>
