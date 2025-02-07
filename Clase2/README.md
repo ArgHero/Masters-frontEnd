@@ -35,12 +35,12 @@ function notaObtenida(calificacion){
     if(calificacion<0){
         console.log("La calificación si quiera es positiva")
     }else{
-    console.log(`Con ${calificacion} el estudiante `.concat(
-        (calificacion>=90)?'aprueba con "Excelente"':
-        (calificacion>=75)?'aprueba con "Bien"':
-        (calificacion>=60)?'aprueba con "Suficiente"':
-        "no aprueba"
-    ));
+        console.log(`Con ${calificacion} el estudiante `.concat(
+            (calificacion>=90)?'aprueba con "Excelente"':
+            (calificacion>=75)?'aprueba con "Bien"':
+            (calificacion>=60)?'aprueba con "Suficiente"':
+            "no aprueba"
+        ));
     }
 }
 ```
