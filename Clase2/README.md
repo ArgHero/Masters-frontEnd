@@ -28,19 +28,17 @@ El objetivo es crear un repositorio local y que lo vincules con un repositorio e
 
 ## Solución
 ```sh
-let pruebas = [-23,60,75,0,null,undefined,1/0,1000,74,89,59,32,53,"verde",21,67,45,97,100,Math.floor(Math.random()*100)];
+let pruebas = [-23,60,75,0,null,undefined,1/0,1000,74,89,59,32,53,"verde",21,67,45,97,100,Math.floor(Math.random()*101)];
 pruebas.forEach(notaObtenida);
-
 function notaObtenida(calificacion){
-    if(calificacion<0){
-        console.log("La calificación si quiera es positiva")
-    }else{
+    if(calificacion>100 || calificacion<0 || calificacion==null || calificacion == undefined ||typeof calificacion === "string" )
+        console.log(`Con ${calificacion} la calificación no es valida.`)
+    else
         console.log(`Con ${calificacion} el estudiante `.concat(
             (calificacion>=90)?'aprueba con "Excelente"':
             (calificacion>=75)?'aprueba con "Bien"':
             (calificacion>=60)?'aprueba con "Suficiente"':
-            "no aprueba"
-        ));
-    }
+            "no aprueba")
+        );
 }
 ```
