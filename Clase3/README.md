@@ -12,6 +12,37 @@
 
 [![repositorio](https://i.pinimg.com/736x/ce/fd/a1/cefda1a3712809039224b672ea47827b.jpg)](https://github.com/ArgHero)
 
+## Ejercicios de clase
+
+### 1. Usar cualquier tipo de bucle para realizar una tabla de multiplicar, obtener la tabla de multiplicar del 1 al 10 del numero ingresado por el usuario.
+```sh
+let multiplo = prompt("Ingrese un número");
+let tabla = "";
+for (let index = 1; index <= 10; index++) {
+    tabla += multiplo+` x ${index} = ${parseInt(multiplo)*index}\n`;
+}
+alert(tabla);
+```
+### 2. Contar la cantidad de digitos ingresados
+```sh
+alert(`El número ingresado tiene ${multiplo.length} cifras.`)
+```
+### 3. Obtener la suma de los digitos de un numero
+```sh
+let acumulador=0;
+for (let index = 0; index < multiplo.length; index++) {
+    acumulador+=parseInt(multiplo.charAt(index));
+}
+alert(`La suma de los elementos de entrada es: ${acumulador}`)
+```
+### 4. Encontrar el numero mayor de un arreglo.
+```sh
+const datos = [10,15,47,25,23,21,54,32,116,33];
+let mayor=0;
+numeros.forEach(n=>{if(n>mayor){mayor=n}});
+alert(`El número mas grande ingresado es de ${mayor}`);
+```
+
 ## Práctica: Arreglos y Ciclos
 Imagina que tienes un programa que clasifica las frutas según su tipo y cuenta cuántas hay de cada tipo.
 
