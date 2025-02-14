@@ -85,7 +85,7 @@ Crea un sistema muy sencillo para hacer seguimiento de los libros que has leído
 - Define una función `agregarLibro(titulo)`, que añada un libro a un array llamado `librosLeidos`.
 - Define una función `mostrarLibrosLeidos()`, que imprima todos los libros que has leído.
 
-## Array de prueba
+### Array de prueba
 ```sh
 let librosLeidos = [
     "Cien años de soledad",
@@ -100,12 +100,12 @@ let librosLeidos = [
     "El nombre de la rosa"
 ];
 ```
-## Función anónima
+### Función anónima
 Esta declara la función de agregar un libro.
 ```sh
 const agregarLibro = (titulo) => librosLeidos.push(titulo);
 ```
-## Función que no recibe parámetros
+### Función que no recibe parámetros
 Esta función se encarga de generar un string estructurado con todos los libros leidos de forma ordenada.
 ```sh
 function mostrarLibrosLeidos(){
@@ -114,7 +114,7 @@ function mostrarLibrosLeidos(){
     return mensaje;
 }
 ```
-## Implementación
+### Implementación
 ```sh
 agregarLibro(prompt("Ingresa el nombre del libro que quieras agregar:"));
 agregarLibro("One Piece");
