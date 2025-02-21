@@ -15,7 +15,7 @@
 ## Ejercicios de clase: Funciones
 ### 1. Válidar si una función es un palindromo
 Mediante funciones de orden superior se invierte la cadena de caracteres introducida por el usuario y regresa si esta es igual a la cadena original o no.
-```ssh
+```javascript
 let prueba = prompt("Ingrese la palabra que quiere verificar como palindromo:");
 alert(`La oración "${prueba}" `.concat((esPalindromo(prueba))?"SI":"NO").concat(" es un palindromo."));
 
@@ -26,7 +26,7 @@ function esPalindromo(palabra){
 ```
 ### 2. Filtrar los números menores de 6 que contiene un Array.
 Creamos un Array aleatorio cada vez que se compila el código y unicamente se muestran aquellos números que superan el valor de 5, aun asi la función selector esta preparada para cambiar dicho valor frontera.
-```ssh
+```javascript
 let arrayAleatorio = [];
 for (let i = 0; i < 10; i++) {
     let numeroAleatorio = Math.floor(Math.random() * 10) + 1;
@@ -41,7 +41,7 @@ function selector(arreglo,limite){
 
 ### 3. Obtener el área de un circulo.
 Pide al usuario que ingrese el radio del circulo y regresa el area mediante una función simple.
-```ssh
+```javascript
 let radio = parseInt(prompt("Para obtener el área de un circulo, ingrese su radio:"));
 alert(`El área de un circulo de radio ${radio} es de: ${areaCirculo(radio).toFixed(2)} unidades cuadradas.`);
 
@@ -52,7 +52,7 @@ function areaCirculo(radio){
 
 ### 4. Crear una calculadora básica (+,-,*,/) entre dos valores.
 mediante un codigo ingresado por el usuario donde ingresa los valores y el operador separados por ',', la función hace uso de un switch-case para determinar de que operación se trata.
-```ssh
+```javascript
 let calculo = prompt("Ingrese los datos que desea operar con el formato 'num1,num2,operacion'").split(',');
 let resultado = `${calculo[0]} ${calculo[2]} ${calculo[1]} = ${calculadora(calculo)}`
 alert(resultado);
@@ -85,8 +85,8 @@ Crea un sistema muy sencillo para hacer seguimiento de los libros que has leído
 - Define una función `agregarLibro(titulo)`, que añada un libro a un array llamado `librosLeidos`.
 - Define una función `mostrarLibrosLeidos()`, que imprima todos los libros que has leído.
 
-## Array de prueba
-```sh
+### Array de prueba
+```javascript
 let librosLeidos = [
     "Cien años de soledad",
     "Don Quijote de la Mancha",
@@ -100,22 +100,22 @@ let librosLeidos = [
     "El nombre de la rosa"
 ];
 ```
-## Función anónima
+### Función anónima
 Esta declara la función de agregar un libro.
-```sh
+```javascript
 const agregarLibro = (titulo) => librosLeidos.push(titulo);
 ```
-## Función que no recibe parámetros
+### Función que no recibe parámetros
 Esta función se encarga de generar un string estructurado con todos los libros leidos de forma ordenada.
-```sh
+```javascript
 function mostrarLibrosLeidos(){
     let mensaje = "Se han leido los siguientes libos:\n"
     librosLeidos.forEach(libro => mensaje+=`\t-${libro}\n`);
     return mensaje;
 }
 ```
-## Implementación
-```sh
+### Implementación
+```javascript
 agregarLibro(prompt("Ingresa el nombre del libro que quieras agregar:"));
 agregarLibro("One Piece");
 console.log(mostrarLibrosLeidos());
