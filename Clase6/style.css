@@ -1,0 +1,175 @@
+/*-----------------Configuraciones generales---------------*/
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-size: 16px;
+    font:inherit;
+    box-sizing: border-box;
+    font-family:'Oswald',sans-serif;
+    
+}
+
+body{
+    background-color: #6c788e;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    background-color: #cfd5e1;
+    max-width: 1200px;
+    min-width: 360px;
+    width: 100%;
+    margin-top: 2vh;
+    font-size: 150%;
+    padding: 2%;
+    text-align: center;
+    gap: 1rem;
+    border-radius: 1rem;
+}
+
+div.separador{
+    max-width: 1200px;
+    min-width: 360px;
+    width: 100%;
+    gap: 10px;
+    margin-top: 3vh;
+    display: flex;
+    flex-flow: row-reverse;
+}
+aside{
+    border-radius: 1rem;
+    padding: 1%;
+    background-color: #cfd5e1;
+    width: 40%;
+}
+aside ul{
+    list-style-type: none;
+}
+main{
+    width: 60%;
+}
+#comentarios{
+    margin-top: 1%;
+    background-color: #ededf2;
+    padding: 1%;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    height: 300px;
+    max-height: 300px;
+    gap: 3px;
+    overflow-y: auto;
+    
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+#comentarios::-webkit-scrollbar {
+    width:0.5vw;
+}
+#comentarios::-webkit-scrollbar-track {
+    background: #6c788e; /* Color de fondo de la pista */
+}
+#comentarios::-webkit-scrollbar-thumb {
+    background: #465266; /* Color del pulgar */
+    border-radius: 6px; /* Bordes redondeados del pulgar */
+}
+
+
+.comentario{
+    position: relative;
+    background-color: #fcfdff;
+    display: flex;
+    padding: 2%;
+    gap: 2%;
+    min-height: 130px;
+    border-radius: 50rem 5rem 5rem 50rem;
+    border-bottom: #6c788e solid 1px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    align-items: center;
+}
+.comentario img{
+    object-fit: cover;
+    aspect-ratio: 1;
+    width: 5em;
+    height: 5em;
+    margin: 1% 0;
+    border-radius: 50%;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    border: black solid 1px;
+}
+.comentario .contenido{
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+.comentario .encabezado{
+    background-color: #cfd5e1;
+    border-bottom: #6c788e solid 1px;
+    border-left: #6c788e solid 1px;
+    border-style:groove;
+    border-top-right-radius: 5px;
+    padding: 0.5%;
+    display: flex;
+    justify-content: space-between;
+}
+.comentario .texto{
+    max-height: 70%;
+    width: 100%;
+    text-align: justify;
+    overflow: hidden; /* Oculta el desbordamiento del contenido */
+    text-overflow: ellipsis;
+}
+.dropdown {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    width: fit-content;
+    color: #465266;
+}
+.dropdown button{
+    background-color: inherit;
+}
+.dropdown:hover{
+    color: #cfd5e1;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ededf2;
+    min-width: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 2%;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #6c788e
+}
+
+.show {
+    display: block;
+}
+h2{
+    font-size: larger;
+    text-align: left;
+}
+
+#ingresarComentario{
+    max-width: 1200px;
+    min-width: 360px;
+    width: 100%;
+    gap: 10px;
+    margin-top: 1vh;
+
+}
