@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción al DOM en JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Document Object Model: DOM (Documento del modelo del objeto)</h1>
+    </header>
+    <div class="separador">
+        <aside id="ejerciciosClase">
+            <h2 class="subtitulos">Ejercicios de clase</h2>
+
+            <ol class="descripcion">
+                <li>Cambiar el color de un texto cuando presionamos un botón.</li>
+                <button type="button" class="button" onclick="ejercicio1()">Cambia el color del texto</button>
+                <li>Crear un botón que permita mostrar u ocultar un texto.</li>
+                <button type="button" class="button" onclick="ejercicio2()">Cambia la visibilidad del texto</button>
+                <li>Contador de clicks.</li>
+                <button type="button" class="button" onclick="ejercicio3()">Cuenta los clicks</button>
+            </ol>
+            <p id="ejercicio">Cuenta de clicks: 0</p>
+            <h2 class="subtitulos">Actividad de campus: Comentarios</h2>
+            <section id="comentarios">
+                <template id="comentarioTemplate">
+                    <article class="comentario">
+                        <img src="" alt="Foto de perfil">
+                        <span class="contenido">
+                            <div class="encabezado">
+                                <p class="usuario">Usuario</p>
+                                <p class="fecha">Fecha</p>
+                            </div>
+                            <p class="cuerpo">cuerpo del comentario</p>
+                        </span>
+                        <div class="borrar" onclick="eliminarComentario(event)">&#10006</div>
+                    </article>
+                </template>
+            </section>
+            <section id="ingresarComentario">
+                <textarea id="areaTexto" name="comentar" maxlength="200" placeholder="Escribe aquí tus comentarios (max.200)."></textarea>
+                <button class="button" type="submit" onclick="publicarComentario()">Comentar</button>
+            </section>
+        </aside>
+        <main>
+            <section id="temasClase">
+                <h2 class="subtitulos">NOTAS DE CLASE: Métodos importantes dentro de JavaScript</h2>
+                <p>Tanto elementos pueden ser identificados por ID y clase, se pueden lanzar acciones a partir de eventos de la página.</p>
+                <h2>Elementos de ejemplo</h2>
+                <p id="parrafo">Este texto será editado por JS</p>
+                <p id="titulo">Este es un titulo que se va a modificar</p>
+                <h4>XML no suele usarse tanto fuera de la transferencia de información.</h4>
+                <input type="text" id="username" placeholder="Ingresa tu usuario">
+                <input type="password" id="password" placeholder="Password">
+                <button onclick="LogIn()"  >Ingresa</button>
+                <h2>Manejo de eventos</h2>
+                <button id="boton">Enviar</button>
+                <p>
+                    Interfaz de programación que representa una estructura HTML y la transforma en un árbol de nodos. <br>
+                    Esto permite manipular dinámicamente un archivo HTML: 
+                    <ul>
+                        <li>Cambiar contenidos.</li>
+                        <li>Cambiar estructura.</li>
+                        <li>Cambiar atributos</li>
+                    </ul>
+                    Una estructura de arbol contiene cada elemento como un nodo de dicho árbol.
+                    <ul>
+                        <li>Nodo Raiz -> representa todo el documento (Doctype)</li>
+                        <ul>
+                            <li>Nodo html -> Es el nodo principal</li>
+                            <ul>
+                                <li>head </li>
+                                <li>body </li>
+                                <ul>
+                                    <li>hn</li>
+                                    <li>title</li>
+                                    <li>p</li>
+                                    <li>etc.</li>
+                                    <ul>
+                                        <li>Contenidos</li>
+                                        <ul>
+                                            <li>atributos como ID, class y src</li>
+                                            <ul>
+                                                <li>comentarios</li>
+                                            </ul>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </ul>
+                </p>
+                <img id="notaClase" src="arboldenodos.png" alt="arboldenodos">
+            </section>
+        </main>
+    </div>
+    
+    <footer>
+        <script src="main.js"></script> 
+    </footer>
+    
+</body>
+</html>
