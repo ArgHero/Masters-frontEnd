@@ -44,24 +44,46 @@ aside{
     padding: 1%;
     background-color: #cfd5e1;
     width: 40%;
+    height: fit-content;
 }
-aside ul{
-    list-style-type: none;
+aside ol{
+    list-style-type:lower-roman;
+    padding-left: 5%;
 }
+.descripcion{
+    display: flex;
+    flex-flow: column;
+}
+#ejercicio{
+    text-align: center;
+    background-color: #6c788e;
+    visibility: visible;
+    padding: 2%;
+    border-radius: 1rem;
+    font-size: x-large;
+    margin: 5% 0%;
+    border: black solid 1px;
+}
+
 main{
     width: 60%;
 }
 
 #temasClase{
-
     background-color: #cfd5e1;
     padding: 1%;
     border-radius: 1rem;
     display: flex;
     flex-flow: column;
+    align-items: center;
+    gap: 2px;
 }
 #temasClase p{
     font-size: larger;
+}
+#notaClase{
+    width: 90%;
+    border-radius: 1rem;
 }
 
 #comentarios{
@@ -135,8 +157,10 @@ main{
     max-height: 70%;
     width: 100%;
     text-align: justify;
-    overflow: hidden; /* Oculta el desbordamiento del contenido */
+    overflow: hidden; 
+    overflow-wrap: break-word;
     text-overflow: ellipsis;
+    word-break: break-all;
 }
 .comentario .borrar:hover{
     cursor: pointer;

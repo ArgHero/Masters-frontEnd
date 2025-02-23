@@ -13,16 +13,41 @@
     </header>
     <div class="separador">
         <aside id="ejerciciosClase">
-            <h2>Ejercicios de clase</h2>
-            <ol>
-                <li>Cambiar el color de un texto cuando presionamos un botón</li>
-                <li>Crear un botón que perita mostrar u ocultar un texto</li>
-                <li>Contador de clicks</li>
+            <h2 class="subtitulos">Ejercicios de clase</h2>
+
+            <ol class="descripcion">
+                <li>Cambiar el color de un texto cuando presionamos un botón.</li>
+                <button type="button" class="button" onclick="ejercicio1()">Cambia el color del texto</button>
+                <li>Crear un botón que permita mostrar u ocultar un texto.</li>
+                <button type="button" class="button" onclick="ejercicio2()">Cambia la visibilidad del texto</button>
+                <li>Contador de clicks.</li>
+                <button type="button" class="button" onclick="ejercicio3()">Cuenta los clicks</button>
             </ol>
+            <p id="ejercicio">Cuenta de clicks: 0</p>
+            <h2 class="subtitulos">Actividad de campus: Comentarios</h2>
+            <section id="comentarios">
+                <template id="comentarioTemplate">
+                    <article class="comentario">
+                        <img src="" alt="Foto de perfil">
+                        <span class="contenido">
+                            <div class="encabezado">
+                                <p class="usuario">Usuario</p>
+                                <p class="fecha">Fecha</p>
+                            </div>
+                            <p class="cuerpo">cuerpo del comentario</p>
+                        </span>
+                        <div class="borrar" onclick="eliminarComentario(event)">&#10006</div>
+                    </article>
+                </template>
+            </section>
+            <section id="ingresarComentario">
+                <textarea id="areaTexto" name="comentar" maxlength="200" placeholder="Escribe aquí tus comentarios (max.200)."></textarea>
+                <button class="button" type="submit" onclick="publicarComentario()">Comentar</button>
+            </section>
         </aside>
         <main>
             <section id="temasClase">
-                <h2>Métodos importantes dentro de JavaScript</h2>
+                <h2 class="subtitulos">NOTAS DE CLASE: Métodos importantes dentro de JavaScript</h2>
                 <p>Tanto elementos pueden ser identificados por ID y clase, se pueden lanzar acciones a partir de eventos de la página.</p>
                 <h2>Elementos de ejemplo</h2>
                 <p id="parrafo">Este texto será editado por JS</p>
@@ -68,29 +93,8 @@
                         </ul>
                     </ul>
                 </p>
+                <img id="notaClase" src="arboldenodos.png" alt="arboldenodos">
             </section>
-            <h2 class="subtitulos">Actividad de campus: Comentarios</h2>
-            <section id="comentarios">
-                <template id="comentarioTemplate">
-                    <article class="comentario">
-                        <img src="" alt="Foto de perfil">
-                        <span class="contenido">
-                            <div class="encabezado">
-                                <p class="usuario">Usuario</p>
-                                <p class="fecha">Fecha</p>
-                            </div>
-                            <p class="cuerpo">cuerpo del comentario</p>
-                        </span>
-                        <div class="borrar" onclick="eliminarComentario(event)">&#10006</div>
-                    </article>
-                </template>
-            </section>
-
-            <section id="ingresarComentario">
-                <textarea id="areaTexto" name="comentar" maxlength="200" placeholder="Escribe aquí tus comentarios (max.200)."></textarea>
-                <button class="button" type="submit" onclick="publicarComentario()">Comentar</button>
-            </section>
-
         </main>
     </div>
     
