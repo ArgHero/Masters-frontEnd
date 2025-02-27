@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementación del DOM mediante una página WEB.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="container">
+        <article class="form-container">
+            <span class="login-container">
+                <h1>Identifícate</h1>
+
+                <label for="">Usuario:</label>
+                <input type="text" id="username">
+
+                <label for="">Contraseña:</label>
+                <input type="password" id="password">
+                <p id="error" class="error"></p>
+            </span>
+            <button onclick="logIn()">Iniciar sesión</button>
+        </article>
+        <article class="image-container">
+            <div class="carousel">
+                <img src="https://i.pinimg.com/736x/13/83/41/1383416185e0d38729882fc438af8bb3.jpg" alt="fondo-pagina-1">
+                <img src="https://i.pinimg.com/736x/c1/23/9b/c1239b8040260ecef8e466052d0ddfdb.jpg" alt="fondo-pagina-2">
+                <img src="https://i.pinimg.com/736x/ae/eb/11/aeeb11ce355a24ce075effbd012c7ef5.jpg" alt="fondo-pagina-3">
+                <img src="https://i.pinimg.com/736x/1e/2d/db/1e2ddb34ec9bc23523438c6f76b3fbcb.jpg" alt="fondo-pagina-4">
+            </div>
+        </article>
+        
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
