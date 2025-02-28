@@ -14,7 +14,7 @@
     <main>
         <section id="app-container">
             <article class="titulo">
-                <p>Password Generator</p>
+                <p>Generador de contraseñas</p>
             </article>
             <article class="app-output">
                 <p id="generated-pass"></p>
@@ -22,7 +22,7 @@
             </article>
             <article class="app-body">
                 <span class="quantity">
-                    <p>Character Length</p>
+                    <p>Longitud de la contraseña</p>
                     <p id="num-caracteres">10</p>
                 </span>
                 <span class="range-container">
@@ -31,29 +31,29 @@
                 <ul class="configs">
                     <li>
                         <input type="checkbox" id="doUpper">
-                        <label for="doUpper">Include Uppercase Letters</label>
+                        <label for="doUpper">Incluye mayúsculas</label>
                     </li>
                     <li>
                         <input type="checkbox" id="doLower">
-                        <label for="doLower">Include Lowercase Letters</label>
+                        <label for="doLower">Incluye miúsculas</label>
                     </li>
                     <li>
                         <input type="checkbox" id="doNumber">
-                        <label for="doNumber">Include Numbers</label>
+                        <label for="doNumber">Incluye numeros</label>
                     </li>
                     <li>
                         <input type="checkbox" id="doSymbol">
-                        <label for="doSymbol">Include Symbols</label>
+                        <label for="doSymbol">Incluye simbolos</label>
                     </li>
                 </ul>
                 <span class="rate-container">
-                    <p>STRENGTH</p>
+                    <p>FUERZA</p>
                     <div class="rating">
-                        <p>MEDIUM</p>
-                        <progress value="3" max="5"></progress>
+                        <p></p>
+                        <progress value="0" max="4"></progress>
                     </div>
                 </span>
-                <button type="submit" onclick="updatePassword()">GENERATE →</button>
+                <button type="submit" onclick="updatePassword()">GENERAR →</button>
             </article>
         </section>
     </main>

@@ -28,17 +28,68 @@ function generatePassword(){
     if (includeNumbers) allowedChars += NUMBERS;
     if (includeSymbols) allowedChars += SYMBOL;
 
-    for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * allowedChars.length);
-        password += allowedChars[randomIndex];
+    if (allowedChars === "") 
+        return "Selecciona por lo menos un tipo de caracter";
+    else{
+        for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * allowedChars.length);
+            password += allowedChars[randomIndex];
+        }
+        return password;
     }
-    return password;
-}
-function updatePassword() {
-    document.getElementById("generated-pass").textContent = generatePassword();
 }
 
-// Event listeners para los elementos de la interfaz
+function updateStrength() {
+    const length = rangeInput.value;
+    const includeUppercase = document.getElementById("doUpper").checked;
+    const includeLowercase = document.getElementById("doLower").checked;
+    const includeNumbers = document.getElementById("doNumber").checked;
+    const includeSymbols = document.getElementById("doSymbol").checked;
+
+    let strength = 0;
+    if (includeUppercase) strength++;
+    if (includeLowercase) strength++;
+    if (includeNumbers) strength++;
+    if (includeSymbols) strength++;
+
+    if (length >= 10) strength++;
+
+    const ratingText = document.querySelector('.rating p');
+    const progressBar = document.querySelector('.rating progress');
+
+    if (strength <= 1) {
+        ratingText.textContent = "LOW";
+        progressBar.value = 1;
+    } else if (strength == 2) {
+        ratingText.textContent = "MEDIUM";
+        progressBar.value = 2;
+    } else if (strength == 3) {
+        ratingText.textContent = "HIGH";
+        progressBar.value = 3;
+    } else if (strength >= 4) {
+        ratingText.textContent = "MAX";
+        progressBar.value = 4;
+    }
+}
+
+function copiarTexto() {
+    const textToCopy = document.getElementById("generated-pass").textContent;
+    navigator.clipboard.writeText(textToCopy).then(function(){
+        alert("Se copió la contraseña al portapapeles");
+    }).catch(err => {
+        console.error('Error al copiar el texto: ', err);
+    });
+}
+
+function updatePassword() {
+    document.getElementById("generated-pass").textContent = generatePassword();
+};
+document.getElementById("doUpper").addEventListener('change', updateStrength);
+document.getElementById("doLower").addEventListener('change', updateStrength);
+document.getElementById("doNumber").addEventListener('change', updateStrength);
+document.getElementById("doSymbol").addEventListener('change', updateStrength);
+rangeInput.addEventListener('input', updateStrength);
+
 
 
 
